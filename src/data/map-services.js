@@ -1,5 +1,3 @@
-const accessToken = process.env.GATSBY_MAPBOX_KEY;
-
 export const mapServices = [
   {
     name: 'OpenStreetMap',
@@ -10,6 +8,6 @@ export const mapServices = [
     name: 'Mapbox',
     attribution:
       'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    url: `https://api.mapbox.com/styles/v1/colbyfayock/ck8c2foj72lqk1jnug0g2haw0/tiles/256/{z}/{x}/{y}@2x?access_token=${accessToken}`,
+    url: `https://api.mapbox.com/styles/v1/colbyfayock/ck8c2foj72lqk1jnug0g2haw0/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiYW1hZ3NpZCIsImEiOiJja3IybXAwd3UyZDZoMm9xYWRoaXJhejlvIn0.Y1B46r2_Pd0u0hVBXjyBXA`,
   },
 ];

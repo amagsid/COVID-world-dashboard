@@ -94,7 +94,7 @@ const IndexPage = () => {
         <title>Home Page</title>
       </Helmet>
 
-      <div className="tracker" style={{ height: '100%' }}>
+      <div className="tracker" style={{ height: '100vh' }}>
         <Map {...mapSettings} />
 
         <div className="tracker-stats">

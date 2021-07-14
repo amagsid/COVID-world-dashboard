@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header>
       <Container type="content">
-        <h1>COVID-19 Worldwide Dashboard</h1>
+        <h1>Hello COVID-19 Worldwide Dashboard</h1>
         <ul>
           <li>
             <a href="">

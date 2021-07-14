@@ -16,7 +16,7 @@ const LOCATION = {
   lng: 0,
 };
 const CENTER = [LOCATION.lat, LOCATION.lng];
-const DEFAULT_ZOOM = 2;
+const DEFAULT_ZOOM = 4;
 
 const IndexPage = () => {
   const { data: countries = [] } = useCoronavirusTracker({
@@ -94,7 +94,7 @@ const IndexPage = () => {
         <title>Home Page</title>
       </Helmet>
 
-      <div className="tracker">
+      <div className="tracker" style={{ height: '100%' }}>
         <Map {...mapSettings} />
 
         <div className="tracker-stats">

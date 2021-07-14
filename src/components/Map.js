@@ -24,8 +24,6 @@ const Map = ( props ) => {
   });
   const basemap = services.find(( service ) => service.name === defaultBaseMap );
 
-  console.log( services );
-
   let mapClassName = `map`;
 
   if ( className ) {

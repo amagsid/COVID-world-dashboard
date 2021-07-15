@@ -141,11 +141,11 @@ const IndexPage = () => {
               <p>Last Updated: { stats ? friendlyDate( stats?.updated ) : '-' }</p>
             </div>
           </Col>
-          <Col md={3} className={'mt-2 pl-0'}>
+          { /* <Col md={3} className={'mt-2 pl-0'}>
             <Col className={' col-styling ml-3'}>
               <h1> hey</h1>
             </Col>
-          </Col>
+          </Col> */ }
         </Row>
       </Container>
     </Layout>

@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 import L from 'leaflet';
 import { Row, Col } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
+import CasesDeathsByCountry from '../components/CasesDeathsByCountry';
 
 import { promiseToFlyTo, geoJsonToMarkers, clearMapLayers } from 'lib/map';
 import { trackerLocationsToGeoJson, trackerFeatureToHtmlMarker } from 'lib/coronavirus';
@@ -56,34 +57,34 @@ const IndexPage = () => {
     const bounds = locationsGeoJsonLayers.getBounds();
 
     locationsGeoJsonLayers.addTo( map );
-    var myLines = [
-      {
-        type: 'LineString',
-        coordinates: [
-          [-100, 40],
-          [-105, 45],
-          [-110, 55],
-        ],
-      },
-      {
-        type: 'LineString',
-        coordinates: [
-          [-105, 40],
-          [-110, 45],
-          [-115, 55],
-        ],
-      },
-    ];
+    // var myLines = [
+    //   {
+    //     type: 'LineString',
+    //     coordinates: [
+    //       [-100, 40],
+    //       [-105, 45],
+    //       [-110, 55],
+    //     ],
+    //   },
+    //   {
+    //     type: 'LineString',
+    //     coordinates: [
+    //       [-105, 40],
+    //       [-110, 45],
+    //       [-115, 55],
+    //     ],
+    //   },
+    // ];
 
-    var myStyle = {
-      color: '#ff7800',
-      weight: 5,
-      opacity: 0.65,
-    };
+    // var myStyle = {
+    //   color: '#ff7800',
+    //   weight: 5,
+    //   opacity: 0.65,
+    // };
 
-    L.geoJSON( myLines, {
-      style: myStyle,
-    }).addTo( map );
+    // L.geoJSON( myLines, {
+    //   style: myStyle,
+    // }).addTo( map );
 
     map.fitBounds( bounds );
   }
@@ -129,8 +130,8 @@ const IndexPage = () => {
           <Col md={9} className="tracker">
             <Dashboard />
             <Row>
-              <Col md={3} className={' col-styling'}>
-                <h2>hey</h2>
+              <Col md={3} className={'col-styling'}>
+                <CasesDeathsByCountry />
               </Col>
               <Col md={9}>
                 <Map {...mapSettings} />
@@ -141,11 +142,11 @@ const IndexPage = () => {
               <p>Last Updated: { stats ? friendlyDate( stats?.updated ) : '-' }</p>
             </div>
           </Col>
-          { /* <Col md={3} className={'mt-2 pl-0'}>
+          <Col md={3} className={'mt-2 pl-0'}>
             <Col className={' col-styling ml-3'}>
               <h1> hey</h1>
             </Col>
-          </Col> */ }
+          </Col>
         </Row>
       </Container>
     </Layout>

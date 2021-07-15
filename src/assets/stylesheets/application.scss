@@ -37,3 +37,8 @@ main {
 .no-left-padding {
   padding-left: 0;
 }
+
+.scroll {
+  max-height: 770px;
+  overflow-y: scroll;
+}

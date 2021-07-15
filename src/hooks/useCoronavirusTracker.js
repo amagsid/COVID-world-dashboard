@@ -22,6 +22,7 @@ const defaultState = {
 
 const useCoronavirusTracker = ({ api = 'all' }) => {
   const [tracker = {}, updateTracker] = useState( defaultState );
+  const [loading, SetLoading] = useState( false );
 
   async function fetchTracker() {
     let route = ENDPOINTS.find(({ id } = {}) => id === api );
@@ -29,7 +30,7 @@ const useCoronavirusTracker = ({ api = 'all' }) => {
     if ( !route ) {
       route = ENDPOINTS.find(({ isDefault } = {}) => !!isDefault );
     }
-
+    SetLoading( true );
     let response;
 
     try {
@@ -53,11 +54,14 @@ const useCoronavirusTracker = ({ api = 'all' }) => {
 
     const { data } = response;
 
+    SetLoading( false );
+
     updateTracker(( prev ) => {
       return {
         ...prev,
         state: 'ready',
         data,
+        loading,
       };
     });
   }

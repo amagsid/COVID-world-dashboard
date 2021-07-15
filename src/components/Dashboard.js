@@ -1,16 +1,12 @@
 import React from 'react';
 import { commafy } from 'lib/util';
 import { useCoronavirusTracker } from 'hooks';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { Row, Col } from 'react-bootstrap';
 
 function Dashboard() {
   const { data: stats = {} } = useCoronavirusTracker({
     api: 'all',
   });
-
-  // const element = <FontAwesomeIcon icon={faCoffee} />;
 
   return (
     <>

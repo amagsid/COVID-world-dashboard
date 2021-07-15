@@ -7,12 +7,12 @@ function CasesDeathsByCountry() {
     api: 'countries',
   });
 
-  console.log( countries );
-  const countriesByDeathRate = countries.sort(( a, b ) => ( a.deaths < b.deaths ? 1 : -1 ));
-
-  console.log( countriesByDeathRate );
-
   const hasCountries = Array.isArray( countries ) && countries.length > 0;
+
+  let countriesByDeathRate;
+  if ( hasCountries ) {
+    countriesByDeathRate = countries.sort(( a, b ) => ( a.deaths < b.deaths ? 1 : -1 ));
+  }
 
   return (
     <Container className="scroll">

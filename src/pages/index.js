@@ -4,13 +4,12 @@ import L from 'leaflet';
 import { Row, Col } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import CasesDeathsByCountry from '../components/CasesDeathsByCountry';
-
+import Charts from '../components/ChartsWrapper';
 import { promiseToFlyTo, geoJsonToMarkers, clearMapLayers } from 'lib/map';
 import { trackerLocationsToGeoJson, trackerFeatureToHtmlMarker } from 'lib/coronavirus';
 import { friendlyDate } from 'lib/util';
 import Dashboard from '../components/Dashboard';
 import { useCoronavirusTracker } from 'hooks';
-
 import Layout from 'components/Layout';
 // import Container from 'components/Container';
 import Map from 'components/Map';
@@ -143,8 +142,8 @@ const IndexPage = () => {
             </div>
           </Col>
           <Col md={3} className={'mt-2 pl-0'}>
-            <Col className={' col-styling ml-3'}>
-              <h1> hey</h1>
+            <Col className={' col-styling ml-3'} style={{ height: '850px' }}>
+              <Charts />
             </Col>
           </Col>
         </Row>

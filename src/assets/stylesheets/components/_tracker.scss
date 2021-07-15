@@ -1,25 +1,12 @@
 .tracker {
   color: white;
-  background-color: $map-background;
-  height: 95vh;
-}
-
-.tracker-stats {
-  border-top: solid 1px $blue-grey-900;
-  border-bottom: solid 1px $blue-grey-900;
-}
-
-.col {
-  background-color: #222222;
-  margin: 10px;
+  height: 90vh;
 }
 
 .tracker-stat {
   font-size: 1.5em;
   text-align: center;
-
-  // border-right: solid 1px $blue-grey-900;
-  // border-top: solid 1px $blue-grey-900;
+  padding: 10px 0px 10px 0px;
 
   @media (min-width: 601px) {
     &:nth-child(3n) {
@@ -85,4 +72,9 @@ span {
   p {
     margin: 0;
   }
+}
+
+.box {
+  margin: 0 30px;
+  background-color: hotpink;
 }

@@ -9176,6 +9176,16 @@ latest-version@5.1.0, latest-version@^5.0.0:
   dependencies:
     package-json "^6.3.0"
 
+leaflet-providers@^1.12.0:
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/leaflet-providers/-/leaflet-providers-1.12.0.tgz#bf407f580d9564480e2346bc1e6412ef696624cf"
+  integrity sha512-pU/mR4B+NbayBGCg5/88dmRq7t1EGiNPhsVGV3yqHuDn594vIwus4CiPVW0RtiKJNKg8Vf1pILAbFl0i+yk+lQ==
+
+leaflet.tilelayer.colorfilter@^1.2.5:
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/leaflet.tilelayer.colorfilter/-/leaflet.tilelayer.colorfilter-1.2.5.tgz#f1ecbc1500352362643c4c04e5d8b6a2b49784c3"
+  integrity sha512-wUvqVlpEofDEDi0ocXApXAcz1l06RsNBEw3L/2ColaygDPERswgas2Jgv/DVrWrVd0HQAxDerwFqOtBI+zbw3w==
+
 leaflet@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/leaflet/-/leaflet-1.6.0.tgz#aecbb044b949ec29469eeb31c77a88e2f448f308"

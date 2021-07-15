@@ -16,7 +16,7 @@ function Dashboard() {
     <>
       <div className="tracker-stats">
         <Row>
-          <Col className="tracker-stat" md={3}>
+          <Col className="mt-2 mr-1 mb-3 ml-0 tracker-stat col-styling" md={3}>
             <p className="tracker-stat-primary">
               <strong>Total Tests</strong>
               { stats ? commafy( stats?.tests ) : '-' }
@@ -26,7 +26,7 @@ function Dashboard() {
               <span>Per 1 Million</span>
             </p>
           </Col>
-          <Col className="tracker-stat" md={3}>
+          <Col className="mt-2 mr-1 mb-3 ml-0 tracker-stat col-styling" md={3}>
             <p className="tracker-stat-primary">
               <strong>Total Tests</strong>
               { stats ? commafy( stats?.tests ) : '-' }
@@ -37,7 +37,7 @@ function Dashboard() {
             </p>
           </Col>
 
-          <Col className="tracker-stat" md={3}>
+          <Col className=" mt-2 mr-1 mb-3 ml-0 tracker-stat col-styling ">
             <p className="tracker-stat-primary">
               { stats ? commafy( stats?.cases ) : '-' }
               <strong>Total Cases</strong>
@@ -48,7 +48,7 @@ function Dashboard() {
             </p>
           </Col>
 
-          <Col className="tracker-stat" md={3}>
+          <Col className=" mt-2 mr-0 mb-3 ml-0 tracker-stat col-styling" md={3}>
             <p className="tracker-stat-primary">
               { stats ? commafy( stats?.deaths ) : '-' }
               <strong>Total Deaths</strong>

@@ -8,16 +8,20 @@ $map-background: #081217; // tilelayer background color
 * {
   box-sizing: border-box;
 }
+html {
+  height: 100%;
+}
 
-// .col {
-//   background-color: #181e27;
-//   margin: 3px;
-// }
+.col-styling {
+  background-color: rgb(46, 49, 46);
+  border: solid 2px rgb(60, 61, 60);
+}
 
 body {
-  background-color: black;
+  min-height: 100%;
+  background-color: rgb(20, 17, 17);
   font-family: $font-default;
-  margin: 15px;
+  margin: 0px 30px 0px 30px;
 }
 
 .wrapper {

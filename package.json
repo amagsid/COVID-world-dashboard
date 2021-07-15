@@ -4,6 +4,9 @@
   "version": "0.2.2",
   "author": "Colby Fayock <hello@colbyfayock.com>",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "axios": "^0.21.1",
     "gatsby": "^2.24.47",
     "gatsby-plugin-react-helmet": "^3.3.10",
@@ -16,6 +19,8 @@
     "path": "^0.12.7",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.6.1",
+    "react-collapsible": "^2.8.3",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
     "react-icons": "^3.11.0",

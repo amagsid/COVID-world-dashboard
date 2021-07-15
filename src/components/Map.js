@@ -45,7 +45,7 @@ const Map = ( props ) => {
   };
 
   return (
-    <div className={mapClassName}>
+    <div className={mapClassName} id="map">
       <BaseMap ref={mapRef} {...mapSettings}>
         { children }
         { basemap && <TileLayer {...basemap} /> }

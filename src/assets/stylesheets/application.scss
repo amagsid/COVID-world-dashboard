@@ -42,3 +42,13 @@ main {
   max-height: 770px;
   overflow-y: scroll;
 }
+
+.chart-title {
+  color: rgb(128, 128, 128);
+  text-align: center;
+  font-size: 0.5rem;
+}
+
+.chart-title strong {
+  color: rgb(187, 187, 187);
+}

@@ -9,6 +9,7 @@
     "@fortawesome/react-fontawesome": "^0.1.14",
     "axios": "^0.21.1",
     "chart.js": "^3.4.1",
+    "chartjs-plugin-downsample": "^1.1.0",
     "gatsby": "^2.24.47",
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-react-leaflet": "2.0.13",

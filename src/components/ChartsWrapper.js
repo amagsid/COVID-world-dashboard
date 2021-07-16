@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Row, Container } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 import AreaChart from '../components/charts/AreaChart';
 import axios from 'axios';
 
@@ -8,12 +8,10 @@ function ChartsWrapper() {
 
   async function getData() {
     try {
-      const response = await axios.get(
-        'https://disease.sh/v3/covid-19/historical/all?lastdays=30'
-      );
-      setData(response.data);
-    } catch (e) {
-      console.log(`Failed to fetch countries: ${e.message}`, e);
+      const response = await axios.get( 'https://disease.sh/v3/covid-19/historical/all?lastdays=30' );
+      setData( response.data );
+    } catch ( e ) {
+      console.log( `Failed to fetch countries: ${e.message}`, e );
       return;
     }
   }
@@ -29,21 +27,21 @@ function ChartsWrapper() {
   let deathsStats;
   let recoveredStats;
 
-  if (cases) {
-    labels = Object.keys(cases);
-    casesStats = Object.values(cases);
-    recoveredStats = Object.values(recovered);
-    deathsStats = Object.values(deaths);
+  if ( cases ) {
+    labels = Object.keys( cases );
+    casesStats = Object.values( cases );
+    recoveredStats = Object.values( recovered );
+    deathsStats = Object.values( deaths );
   }
 
   const casesRecoveredChartTitle = (
     <h6>
-      Cases and Recovered Numbers <strong>in the last 30 days</strong>{' '}
+      Cases and Recovered Numbers <strong>in the last 30 days</strong>{ ' ' }
     </h6>
   );
   const deathsChartTitle = (
     <h6>
-      Deaths <strong>in the last 30 days</strong>{' '}
+      Deaths <strong>in the last 30 days</strong>{ ' ' }
     </h6>
   );
 
@@ -81,24 +79,17 @@ function ChartsWrapper() {
   ];
 
   return (
-    <Container>
-      <Row className='p-1 pt-3'>
-        <AreaChart
-          title={casesRecoveredChartTitle}
-          labels={labels}
-          dataSet={casesRecoveredDataSets}
-        />
+    <>
+      <Row className="p-1 pt-3">
+        <AreaChart title={casesRecoveredChartTitle} labels={labels} dataSet={casesRecoveredDataSets} />
       </Row>
-      <Row>
-        {' '}
-        <AreaChart
-          title={deathsChartTitle}
-          labels={labels}
-          dataSet={deathsDataSets}
-        />
+      <Row className="p-1 pt-4">
+        <AreaChart title={deathsChartTitle} labels={labels} dataSet={deathsDataSets} />
       </Row>
-      <Row></Row>
-    </Container>
+      <Row className="p-1 pt-4">
+        <AreaChart title={deathsChartTitle} labels={labels} dataSet={deathsDataSets} />
+      </Row>
+    </>
   );
 }
 

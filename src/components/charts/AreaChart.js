@@ -10,13 +10,10 @@ function AreaChart({ labels, dataSet, title }) {
     <div>
       <h5 className="chart-title"> { title }</h5>
       <Line
-        height={400}
-        width={600}
+        height={300}
+        width={500}
         options={{
-          downsample: {
-            enabled: true,
-            threshold: 10, // max number of points to display per dataset
-          },
+          responsive: true,
         }}
         data={{
           labels: labels,

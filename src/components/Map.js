@@ -41,11 +41,12 @@ const Map = ( props ) => {
   const mapSettings = {
     className: 'map-base',
     zoomControl: false,
+
     ...rest,
   };
 
   return (
-    <div className={mapClassName}>
+    <div className={mapClassName} id="map">
       <BaseMap ref={mapRef} {...mapSettings}>
         { children }
         { basemap && <TileLayer {...basemap} /> }

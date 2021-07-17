@@ -1,42 +1,19 @@
 .tracker {
   color: white;
-  background-color: $map-background;
-}
-
-.tracker-stats {
-
-  border-top: solid 1px $blue-grey-900;
-  border-bottom: solid 1px $blue-grey-900;
-
-  ul {
-
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-
-  }
-
+  height: 90vh;
 }
 
 .tracker-stat {
-
-  flex-grow: grow;
-  width: 33.333%;
-  font-size: 2.5em;
+  font-size: 1.5em;
   text-align: center;
-  padding: .4em 0 .5em;
-  border-right: solid 1px $blue-grey-900;
-  border-top: solid 1px $blue-grey-900;
+  padding: 10px 0px 10px 0px;
 
   @media (min-width: 601px) {
     &:nth-child(3n) {
       border-right: 0;
     }
 
-    &:nth-child(-n+3) {
+    &:nth-child(-n + 3) {
       border-top: 0;
     }
   }
@@ -45,7 +22,7 @@
     font-size: 2em;
     width: 50%;
 
-    &:nth-child(-n+2) {
+    &:nth-child(-n + 2) {
       border-top: 0;
     }
   }
@@ -55,43 +32,82 @@
   }
 
   p {
-
-    margin: .5em 0 0;
+    margin: 0.5em 0 0;
 
     &:first-child {
       margin: 0;
     }
-
   }
 
   strong {
     display: block;
-    font-size: .4em;
+    font-size: 0.4em;
     font-weight: normal;
     color: $blue-grey-300;
   }
-
 }
 
 .tracker-stat-secondary {
-
-  font-size: .5em;
+  font-size: 0.5em;
 
   strong {
-    font-size: .6em;
+    font-size: 0.6em;
   }
+}
 
+.per-1-mil {
+  padding-left: 3px;
+  display: inline-block;
+  font-size: 0.85em;
+  font-weight: normal;
+  color: $blue-grey-300;
 }
 
 .tracker-last-updated {
-
   color: $blue-grey-600;
-  font-size: .8em;
+  font-size: 0.8em;
   text-align: center;
-  padding: .6em 0;
+  padding: 0.6em 0;
 
   p {
     margin: 0;
   }
+}
 
+.box {
+  margin: 0 30px;
+  background-color: hotpink;
+}
+
+.cases-deaths-title {
+  text-align: center;
+}
+
+.tracker-title {
+  font-size: 1.25rem;
+  margin: 0px;
+}
+
+.number-stat {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.tracker-stat-primary {
+  height: 70px;
+}
+
+.last-updated {
+  padding-top: 15px;
+  color: rgb(189, 189, 189);
+}
+
+.last-updated h6 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.date {
+  font-size: 1.3rem;
+  font-weight: 600;
 }

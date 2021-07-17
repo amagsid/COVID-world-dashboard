@@ -1,21 +1,28 @@
 import React from 'react';
-import { FaGithub } from 'react-icons/fa';
-
-import Container from 'components/Container';
 
 const Header = () => {
   return (
     <header>
-      <Container type="content">
-        <h1>Hello COVID-19 Worldwide Dashboard</h1>
-        <ul>
+      { /* <Container>
+        <Row>
+          <Col> */ }
+      <div className={'header-container'}>
+        <i className="fas fa-shield-virus fa-fw"></i>
+        { /* </Col>
+          <Col> */ }
+        <h1>COVID-19 Worldwide Dashboard</h1>
+      </div>
+      { /* </Col>
+        </Row> */ }
+      { /* </Container> */ }
+
+      { /* <ul>
           <li>
-            <a href="">
+            <a href=''>
               <FaGithub /> Github
             </a>
           </li>
-        </ul>
-      </Container>
+        </ul> */ }
     </header>
   );
 };

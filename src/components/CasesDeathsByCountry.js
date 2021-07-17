@@ -1,6 +1,6 @@
 import React from 'react';
 import { useCoronavirusTracker } from 'hooks';
-import { Container, Row } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 
 function CasesDeathsByCountry() {
   const { data: countries = [], loading } = useCoronavirusTracker({
@@ -14,23 +14,43 @@ function CasesDeathsByCountry() {
     countriesByDeathRate = countries.sort(( a, b ) => ( a.deaths < b.deaths ? 1 : -1 ));
   }
 
-  return (
-    <Container className="scroll">
-      <h6>
-        <span>cases </span> and <span>deaths </span> by
-        <span> country/region </span>
-      </h6>
+  console.log( countriesByDeathRate );
 
-      { hasCountries &&
-        !loading &&
-        countriesByDeathRate.map(( e ) => {
-          return (
-            <Container key={e.countryInfo._id}>
-              <Row> { e.country } </Row>
-            </Container>
-          );
-        }) }
-    </Container>
+  return (
+    <>
+      <div className="scroll cases-deaths">
+        <Row>
+          { ' ' }
+          <h6 className="grey cases-deaths-title">
+            <span className="white"> Cases </span> and
+            <span className="red"> Deaths </span> by Country/Region/Sovereignty
+          </h6>
+        </Row>
+
+        { hasCountries &&
+          !loading &&
+          countriesByDeathRate.map(( e ) => {
+            if ( e.country !== 'Diamond Princess' ) {
+              return (
+                <div className="country-stat-container">
+                  <div className="padding-left">
+                    <Row key={e.countryInfo._id}>
+                      <h5>
+                        { e.cases } <span className="grey"> | </span> <span className="red"> { e.deaths } </span>
+                      </h5>
+                    </Row>
+                    <Row>
+                      <h5 className={'country'}>
+                        <span className={'grey'}> { e.country } </span>
+                      </h5>
+                    </Row>
+                  </div>
+                </div>
+              );
+            }
+          }) }
+      </div>
+    </>
   );
 }
 

@@ -2,13 +2,20 @@ header {
   width: 100%;
   color: $white;
   background-color: #233769;
+  padding: 15px 30px 15px 30px;
 
-  .container {
+  .header-container {
     display: flex;
-    justify-content: space-between;
-    height: 2.5em;
-    line-height: 2.5em;
+    flex-direction: row;
+    align-items: center;
   }
+
+  // .container {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   height: 2.5em;
+  //   line-height: 2.5em;
+  // }
 
   ul {
     display: flex;

@@ -1,0 +1,61 @@
+import React from 'react';
+import { Line } from 'react-chartjs-2';
+import PropTypes from 'prop-types';
+// import { Container } from 'react-bootstrap';
+// import { Decimation } from 'chart.js';
+// import DownsamplePlugin, { downsample } from 'chartjs-plugin-downsample';
+
+function AreaChart({ labels, dataSet, title, toggleNotification }) {
+  return (
+    <div>
+      <h5 className="chart-title"> { title }</h5>
+      { toggleNotification ? <h6 className={'toggle'}>Tip: toggle legend buttons to isolate data</h6> : null }
+      <Line
+        height={300}
+        width={500}
+        options={
+          ({
+            responsive: true,
+          },
+          {
+            elements: {
+              point: {
+                radius: 3,
+              },
+            },
+          },
+          {
+            decimation: {
+              enabled: true,
+              algorithm: 'lttb',
+            },
+          },
+          {
+            scales: {
+              yAxes: [
+                {
+                  ticks: {
+                    suggestedMax: 20,
+                  },
+                },
+              ],
+            },
+          })
+        }
+        data={{
+          labels: labels,
+          datasets: dataSet,
+        }}
+      />
+    </div>
+  );
+}
+
+AreaChart.propTypes = {
+  labels: PropTypes.array,
+  dataSet: PropTypes.array,
+  title: PropTypes.string,
+  toggleNotification: PropTypes.bool,
+};
+
+export default AreaChart;

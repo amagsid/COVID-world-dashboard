@@ -13,6 +13,7 @@ import { useCoronavirusTracker } from 'hooks';
 import Layout from 'components/Layout';
 // import Container from 'components/Container';
 import Map from 'components/Map';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // const LOCATION = {
 //   lat: 0,

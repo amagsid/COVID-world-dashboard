@@ -1,26 +1,30 @@
 import React, { useEffect, useState } from 'react';
 import { Row } from 'react-bootstrap';
 import AreaChart from '../components/charts/AreaChart';
+// import BarChart from '../components/charts/BarChart';
 import axios from 'axios';
 
 function ChartsWrapper() {
   const [data, setData] = useState({});
+  // const [summaryData, setSummaryData] = useState({});
 
   async function getData() {
     try {
       const response = await axios.get( 'https://disease.sh/v3/covid-19/historical/all?lastdays=30' );
+
+      // setSummaryData(summaryResponse.data.Global);
       setData( response.data );
     } catch ( e ) {
       console.log( `Failed to fetch countries: ${e.message}`, e );
       return;
     }
   }
+
   useEffect(() => {
     getData();
   }, []);
 
   const { cases, deaths, recovered } = data;
-  // console.log(cases, deaths, recovered);
 
   let labels;
   let casesStats;
@@ -36,7 +40,7 @@ function ChartsWrapper() {
 
   const casesRecoveredChartTitle = (
     <h6>
-      Cases and Recovered Numbers <strong>in the last 30 days</strong>{ ' ' }
+      Cases and Recovered Numbers <strong>in the last 30 days</strong>
     </h6>
   );
   const deathsChartTitle = (
@@ -44,6 +48,8 @@ function ChartsWrapper() {
       Deaths <strong>in the last 30 days</strong>{ ' ' }
     </h6>
   );
+
+  // const SummaryTitle = <h6>Summary of stats </h6>;
 
   const casesRecoveredDataSets = [
     {
@@ -58,8 +64,8 @@ function ChartsWrapper() {
     {
       label: 'cases',
       data: casesStats,
-      backgroundColor: ['rgba(170, 0, 46, 0.3)'],
-      borderColor: ['rgba(170, 0, 46)'],
+      backgroundColor: ['rgba(0, 0, 46, 0.3)'],
+      borderColor: [' rgba(32, 70, 197)'],
       borderWidth: 1,
       fill: true,
       opacity: 0,
@@ -70,8 +76,8 @@ function ChartsWrapper() {
     {
       label: 'deaths',
       data: deathsStats,
-      backgroundColor: ['rgba(0, 0, 46, 0.3)'],
-      borderColor: ['rgba(0, 0, 0)'],
+      backgroundColor: ['rgba(170, 0, 46, 0.3)'],
+      borderColor: ['rgba(245, 49, 14)'],
       borderWidth: 1,
       fill: true,
       opacity: 0,
@@ -80,15 +86,30 @@ function ChartsWrapper() {
 
   return (
     <>
-      <Row className="p-1 pt-3">
-        <AreaChart title={casesRecoveredChartTitle} labels={labels} dataSet={casesRecoveredDataSets} />
-      </Row>
-      <Row className="p-1 pt-4">
-        <AreaChart title={deathsChartTitle} labels={labels} dataSet={deathsDataSets} />
-      </Row>
-      <Row className="p-1 pt-4">
-        <AreaChart title={deathsChartTitle} labels={labels} dataSet={deathsDataSets} />
-      </Row>
+      <div className="pt-5">
+        <Row className="p-1 pt-4">
+          <AreaChart
+            title={casesRecoveredChartTitle}
+            labels={labels}
+            dataSet={casesRecoveredDataSets}
+            toggleNotification={true}
+          />
+        </Row>
+      </div>
+      <div className="pt-3">
+        <Row className="p-1 pt-4">
+          <AreaChart title={deathsChartTitle} labels={labels} dataSet={deathsDataSets} />
+        </Row>
+      </div>
+      { /* <Row className='p-1 pt-4'>
+        <line />
+        <AreaChart2
+          response={summaryData}
+          // title={SummaryTitle}
+          // labels={labels}
+          // dataSet={deathsDataSets}
+        />
+      </Row> */ }
     </>
   );
 }

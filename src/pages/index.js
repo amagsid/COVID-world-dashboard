@@ -85,6 +85,12 @@ const IndexPage = () => {
     mapEffect,
   };
 
+  let updatedDate;
+
+  if ( stats ) {
+    updatedDate = friendlyDate( stats?.updated );
+  }
+
   return (
     <Layout pageName="home">
       <Helmet>
@@ -93,13 +99,13 @@ const IndexPage = () => {
       <Container fluid>
         <Row>
           <Col md={8} className="tracker">
-            <Dashboard />
+            <Dashboard date={updatedDate} />
             <Row>
-              <Col md={3} className={'col-styling'}>
+              <Col md={3} className={'col-styling p-0 '}>
                 <CasesDeathsByCountry />
               </Col>
               <Col md={9}>
-                <Map {...mapSettings} style={{ height: '770px' }} />
+                <Map {...mapSettings} style={{ height: '750px' }} />
               </Col>
             </Row>
 

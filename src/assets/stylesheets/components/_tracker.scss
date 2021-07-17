@@ -55,13 +55,16 @@
   }
 }
 
-span {
+.per-1-mil {
   padding-left: 5px;
   display: inline-block;
   font-size: 0.65em;
   font-weight: normal;
   color: $blue-grey-300;
 }
+
+// span {
+// }
 
 .tracker-last-updated {
   color: $blue-grey-600;
@@ -77,4 +80,8 @@ span {
 .box {
   margin: 0 30px;
   background-color: hotpink;
+}
+
+.cases-deaths-title {
+  text-align: center;
 }

@@ -13,15 +13,16 @@ html {
 }
 
 .col-styling {
-  background-color: rgb(46, 49, 46);
-  border: solid 2px rgb(60, 61, 60);
+  background-color: rgb(36, 33, 34);
+  border: solid 1px rgb(51, 47, 48);
 }
 
 body {
-  min-height: 100%;
-  background-color: rgb(20, 17, 17);
+  min-height: 100vh;
+  background-color: rgb(14, 14, 14);
   font-family: $font-default;
-  margin: 0px 30px 0px 30px;
+  margin: 10px 15px 10px 0px;
+  font-size: 16px;
 }
 
 .wrapper {
@@ -39,7 +40,7 @@ main {
 }
 
 .scroll {
-  max-height: 770px;
+  max-height: 750px;
   overflow-y: scroll;
 }
 
@@ -51,4 +52,56 @@ main {
 
 .chart-title strong {
   color: rgb(187, 187, 187);
+  margin: 0px;
+}
+
+.toggle {
+  font-size: 0.75rem;
+  text-align: center;
+  color: rgb(187, 187, 187);
+  font-style: oblique;
+  letter-spacing: 1px;
+}
+
+.fas {
+  font-size: 30px;
+  margin-right: 20px;
+}
+
+.cases-deaths h5 {
+  padding-left: 0px;
+  margin-bottom: 0px;
+}
+
+// .cases-deaths {
+//   background-color: #081217;
+//   border: solid 1px red;
+// }
+
+.padding-left {
+  position: relative;
+  // border: solid 1px red;
+  left: 30px;
+  padding: 5px;
+}
+
+.red {
+  color: rgb(202, 26, 41);
+}
+
+.grey {
+  color: rgb(192, 192, 192);
+}
+
+.white {
+  color: rgb(255, 255, 255);
+}
+
+.country {
+  font-size: 1rem;
+}
+
+.country-stat-container {
+  border-bottom: solid 1.5px rgb(87, 83, 84);
+  width: 100%;
 }

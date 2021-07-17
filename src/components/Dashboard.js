@@ -16,18 +16,18 @@ function Dashboard({ date }) {
       <div className="tracker-stats">
         <Row>
           <Col className="mt-2 mr-0 mb-3 ml-0 tracker-stat col-styling " md={3}>
-            <p className="tracker-stat-primary">
-              <h6 className={'tracker-title last-updated'}>Last Updated at M/D/YYYY</h6>
-              { date }
+            <p className="tracker-stat-primary last-updated">
+              <h6 className={'tracker-title '}>Last Updated at &#40;M/D/YYYY&#41;</h6>
+              <span className={'date'}> { date } </span>
             </p>
           </Col>
           <Col className="m-1 mb-3 mt-2 mr-0 tracker-stat col-styling" md={3}>
             <p className="tracker-stat-primary">
               <h6 className={'tracker-title'}> Tests Taken</h6>
-              { stats ? commafy( stats?.tests ) : '-' }
+              <span className="number-stat"> { stats ? commafy( stats?.tests ) : '-' } </span>
             </p>
             <p className="tracker-stat-secondary">
-              { stats ? commafy( stats?.testsPerOneMillion ) : '-' }
+              <span> { stats ? commafy( stats?.testsPerOneMillion ) : '-' } </span>
               <span className={'per-1-mil'}>Per 1 Million</span>
             </p>
           </Col>
@@ -35,10 +35,10 @@ function Dashboard({ date }) {
           <Col className="mb-3 ml-0 mt-2 tracker-stat col-styling ">
             <p className="tracker-stat-primary">
               <h6 className={'tracker-title'}>Cases</h6>
-              { stats ? commafy( stats?.cases ) : '-' }
+              <span className="number-stat"> { stats ? commafy( stats?.cases ) : '-' } </span>
             </p>
             <p className="tracker-stat-secondary">
-              { stats ? commafy( stats?.casesPerOneMillion ) : '-' }
+              <span> { stats ? commafy( stats?.casesPerOneMillion ) : '-' } </span>
               <span className={'per-1-mil'}>Per 1 Million</span>
             </p>
           </Col>
@@ -46,7 +46,7 @@ function Dashboard({ date }) {
           <Col className="m-1 mt-2 mb-3 ml-0  tracker-stat col-styling" md={3}>
             <p className="tracker-stat-primary">
               <h6 className={'tracker-title'}>Deaths</h6>
-              { stats ? commafy( stats?.deaths ) : '-' }
+              <span className="number-stat red">{ stats ? commafy( stats?.deaths ) : '-' } </span>
             </p>
             <p className="tracker-stat-secondary">
               { stats ? commafy( stats?.deathsPerOneMillion ) : '-' }

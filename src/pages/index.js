@@ -101,19 +101,15 @@ const IndexPage = () => {
           <Col md={8} className="tracker">
             <Dashboard date={updatedDate} />
             <Row>
-              <Col md={3} className={'col-styling p-0 '}>
+              <Col md={3} className={'col-styling p-0 '} style={{ maxHeight: '850px' }}>
                 <CasesDeathsByCountry />
               </Col>
               <Col md={9}>
-                <Map {...mapSettings} style={{ height: '750px' }} />
+                <Map {...mapSettings} style={{ maxHeight: '800px' }} />
               </Col>
             </Row>
-
-            <div className="tracker-last-updated">
-              <p>Last Updated: { stats ? friendlyDate( stats?.updated ) : '-' }</p>
-            </div>
           </Col>
-          <Col md={4} className={'mt-2 pl-0 col-styling scroll'} style={{ maxHeight: '887px' }}>
+          <Col md={4} className={'mt-2 pl-0 col-styling scroll'} style={{ maxHeight: '850px' }}>
             <Charts />
           </Col>
         </Row>

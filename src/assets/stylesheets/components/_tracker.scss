@@ -56,15 +56,12 @@
 }
 
 .per-1-mil {
-  padding-left: 5px;
+  padding-left: 3px;
   display: inline-block;
-  font-size: 0.65em;
+  font-size: 0.85em;
   font-weight: normal;
   color: $blue-grey-300;
 }
-
-// span {
-// }
 
 .tracker-last-updated {
   color: $blue-grey-600;
@@ -84,4 +81,33 @@
 
 .cases-deaths-title {
   text-align: center;
+}
+
+.tracker-title {
+  font-size: 1.25rem;
+  margin: 0px;
+}
+
+.number-stat {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.tracker-stat-primary {
+  height: 70px;
+}
+
+.last-updated {
+  padding-top: 15px;
+  color: rgb(189, 189, 189);
+}
+
+.last-updated h6 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.date {
+  font-size: 1.3rem;
+  font-weight: 600;
 }

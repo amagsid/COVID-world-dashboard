@@ -1,6 +1,6 @@
 # 🦠 Real-time COVID-19 World Map Dashboard
 
-<img alt="GIF" src="https://github.com/amagsid/Adyen.com-clone/blob/master/readme-assets/app-preview.gif" width="950" height="530" />
+<img alt="GIF" src="https://github.com/amagsid/COVID-world-dashboard/blob/main/src/assets/readme-assets/app-preview.gif" width="950" height="530" />
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 

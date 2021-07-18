@@ -6,7 +6,7 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-This project is built on the Gatsby Leaflet mapping starter project by Colby Fayoock
+This project is built on the Gatsby Leaflet mapping starter project by Colby Fayock <br>
 Data sourced from: https://github.com/NovelCOVID/API
 
 - [Yarn](https://yarnpkg.com/en/)

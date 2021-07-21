@@ -6,7 +6,20 @@ function AreaChart({ labels, dataSet, title, toggleNotification }) {
   return (
     <div>
       <h5 className="chart-title"> { title }</h5>
-      { toggleNotification ? <h6 className={'toggle'}>Tip: toggle legend buttons to isolate data</h6> : null }
+      { toggleNotification ? (
+        <h6
+          className={'toggle'}
+          style={
+            ({ color: 'grey' },
+            { textAlign: 'center' },
+            { fontSize: '0.75rem' },
+            { fontStyle: 'oblique' },
+            { letterSpacing: '1px' })
+          }
+        >
+          Tip: toggle legend buttons to isolate data
+        </h6>
+      ) : null }
       <Line
         height={300}
         width={500}

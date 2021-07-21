@@ -9,8 +9,6 @@ function Dashboard({ date }) {
     api: 'all',
   });
 
-  // console.log(date);
-
   return (
     <>
       <div className="tracker-stats">
@@ -54,6 +52,8 @@ function Dashboard({ date }) {
             </p>
           </Col>
         </Row>
+
+        { /* update stats with a collapsible component */ }
 
         { /* <Collapsible trigger={element}> */ }
 

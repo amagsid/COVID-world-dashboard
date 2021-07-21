@@ -11,15 +11,9 @@ import { friendlyDate } from 'lib/util';
 import Dashboard from '../components/Dashboard';
 import { useCoronavirusTracker } from 'hooks';
 import Layout from 'components/Layout';
-// import Container from 'components/Container';
 import Map from 'components/Map';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-// const LOCATION = {
-//   lat: 0,
-//   lng: 0,
-// };
-// const CENTER = [LOCATION.lat, LOCATION.lng];
 const DEFAULT_ZOOM = 5;
 
 const IndexPage = () => {
@@ -80,7 +74,6 @@ const IndexPage = () => {
   }
 
   const mapSettings = {
-    // center: CENTER,
     defaultBaseMap: 'Mapbox',
     zoom: DEFAULT_ZOOM,
     mapEffect,
